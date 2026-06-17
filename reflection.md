@@ -5,8 +5,15 @@ Answer each question in 3 to 5 sentences. Be specific and honest about what actu
 ## 1. What was broken when you started?
 
 - What did the game look like the first time you ran it?
+
+The game showed a simple interface. The interface had instructions for the user to play the number guessing game in which the user is given 8 attempts to guess the secret number that is between 1 and 100. The game provides three different levels of difficulty: easy, medium, and hard.
+
 - List at least two concrete bugs you noticed at the start  
   (for example: "the hints were backwards").
+
+The first bug I noticed had to do with entering the first guess and clicking "Enter" on the keyboard. The input provides a small note in the righ-hand side that says "Press Enter to apply. "This did not produce the result I expected which was for the app to receive the input and give me feedback.
+
+The second bug I noticed had to with the number of attempts. I expected the number of attempts to decrease after submitting my first guess. The number of attempts stayed the same at 7.
 
 **Bug Reproduction Log**
 
@@ -14,9 +21,9 @@ Document at least 3 bugs you found. Add rows as needed.
 
 | Input | Expected Behavior | Actual Behavior | Console Output / Error |
 |-------|-------------------|-----------------|------------------------|
-| | | | |
-| | | | |
-| | | | |
+|Pressing enter|App would produce a hint|No hint was given|None|
+|13|Hint indicating to guess higher|Hint indicated to guess lower|None|
+|0|Warning that guess was not in range|Hint indicated to guess lower|None|
 
 ---
 
