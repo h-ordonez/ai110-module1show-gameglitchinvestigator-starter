@@ -9,6 +9,7 @@ def get_range_for_difficulty(difficulty: str):
     return 1, 100
 
 
+#FIXME: Users should receive a warning if their guess is out of bounds.
 def parse_guess(raw: str, low: int, high: int):
     """
     Parse user input into an int guess.
@@ -29,6 +30,11 @@ def parse_guess(raw: str, low: int, high: int):
     except Exception:
         return False, None, "That is not a number."
 
+    #FIX: Added a check to ensure the guess is within the specified range, 
+    # providing an error message if it's not. CLaude and I worked together by me
+    # pointing out the missing validation and suggesting the function it should be in.
+    # Claude agreed and implemented the fix by adding a range check after parsing the 
+    # guess, returning an appropriate error message if the guess is out of bounds. This ensures users receive clear feedback when their input is invalid due to being outside the allowed range.
     if value < low or value > high:
         return False, None, f"Please enter a number between {low} and {high}."
 
@@ -46,6 +52,9 @@ def check_guess(guess, secret):
 
     try:
         # FIXME: Game logic error here
+        # FIX: Corrected the hint messages to reflect the appropriate 
+        # direction based on the guess and secret values. Used Claude to identify 
+        # the issue and provide a fix.
         if guess > secret:
             return "Too High", "📉 Go LOWER!"
         else:

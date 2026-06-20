@@ -33,6 +33,8 @@ Document at least 3 bugs you found. Add rows as needed.
 - Give one example of an AI suggestion that was correct (including what the AI suggested and how you verified the result).
 - Give one example of an AI suggestion that was incorrect or misleading (including what the AI suggested and how you verified the result).
 
+I used Claude Code for identifying and fixing bugs. One example of Claude making a correct suggestion was when it identified the correct lines of code in the Try block of the check_guess function that needed to be fixed for the high/low hint bug. I tested this fix by playing the game again. I noticed that the hints were still occassionally wrong. This is an example of a case where Claude was somewhat incorrect in its fix of the high/low hint bug. It correctly fixed the bug inside of the Try block, but the bug was also present inside of the Except block. I guided Claude to look at the Except block, and after it implemented the bug fix in the Except block, I verified the solution worked by testing the hints in the game.
+
 ---
 
 ## 3. Debugging and testing your fixes
@@ -41,6 +43,8 @@ Document at least 3 bugs you found. Add rows as needed.
 - Describe at least one test you ran (manual or using pytest)  
   and what it showed you about your code.
 - Did AI help you design or understand any tests? How?
+
+I determined if a bug was actually fixed by manually testing the fix and by using Claude to run a pytest it created. The pytest failed, which prompted me to look at the test file. I asked Claude to help me determine what the issue was with the test file because the failures appeared to stem from the test cases that came with the source code for the project. Claude pointed out that test cases were incorrectly written for the check_guess function because the function returned a tuple that was directly tested against a string in the tests, which was incorrect. Claude definitely helped in this regard because I had not realized the check_guess function was returning a different data type than what the test expected.
 
 ---
 
