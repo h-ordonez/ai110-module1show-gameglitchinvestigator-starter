@@ -11,7 +11,7 @@ The game showed a simple interface. The interface had instructions for the user 
 - List at least two concrete bugs you noticed at the start  
   (for example: "the hints were backwards").
 
-The first bug I noticed had to do with entering the first guess and clicking "Enter" on the keyboard. The input provides a small note in the righ-hand side that says "Press Enter to apply. "This did not produce the result I expected which was for the app to receive the input and give me feedback.
+The first bug I noticed had to do with entering the first guess and clicking "Enter" on the keyboard. The input provides a small note in the righ-hand side that says "Press Enter to apply." This did not produce the result I expected which was for the app to receive the input and give me feedback.
 
 The second bug I noticed had to with the number of attempts. I expected the number of attempts to decrease after submitting my first guess. The number of attempts stayed the same at 7.
 
@@ -52,11 +52,15 @@ I determined if a bug was actually fixed by manually testing the fix and by usin
 
 - How would you explain Streamlit "reruns" and session state to a friend who has never used Streamlit?
 
+I did not dig deep into Streamlit for this project. However, in an effort to better answer this question I did some research. Reruns refer to python scripts automatically rerunning to display an updated UI whenever the user interacts with a view. Session state refers to Streamlit caching data locally rather than redoing computations when reruns occur.
+
 ---
 
 ## 5. Looking ahead: your developer habits
 
-- What is one habit or strategy from this project that you want to reuse in future labs or projects?
-  - This could be a testing habit, a prompting strategy, or a way you used Git.
+- What is one habit or strategy from this project that you want to reuse in future labs or projects? This could be a testing habit, a prompting strategy, or a way you used Git.
+  - I liked the ability to have Claude create and run tests for me. I would like to incorporate this more in future labs and projects because it can be easy to get lazy and not test my code. Claude makes it easy and removes any excuses in this regard.
 - What is one thing you would do differently next time you work with AI on a coding task?
+  - I would like to figure out a way to keep track of work I have completed and what I was working on when I logged out for the day. I often found myself having to go through my chats with Claude to remember the context of my own work.
 - In one or two sentences, describe how this project changed the way you think about AI generated code.
+  - This project changed the way I think about AI generated code by helping me learn for myself that AI won't simply edit my code on its own. I was concerned that Claude would make changes that I was not aware of, but this was not the case as it asked me before making edits.
